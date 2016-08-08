@@ -42,7 +42,7 @@ on init
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
-    mount_all /system/vendor/etc/fstab.qcom
+    mount_all /system/vendor/etc/fstab.qcom --early
     restorecon_recursive /persist
 
 on early-boot
@@ -121,6 +121,14 @@ on boot
     chown system system /proc/ctp_if_upgrade
     chown system system /proc/ctp_if_upgrade_version
     chown system system /proc/ctp_if_upgrade_old_version
+
+on late-fs
+    # Start bootanim and its dependencies
+    start servicemanager
+    start surfaceflinger
+    start bootanim
+    # mount RW partitions which need run fsck
+    mount_all /system/vendor/etc/fstab.qcom --late
 
 on post-fs-data
     mkdir /persist/data/sfs 0700 system system
