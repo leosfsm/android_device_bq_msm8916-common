@@ -55,8 +55,10 @@ on early-boot
     write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
     write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
 
-    write /sys/kernel/boot_adsp/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
+
+    # Busy loop to wait for devices booted by devstart_sh just in case device not ready
+    exec - root root system -- /system/vendor/bin/init.qcom.devwait.sh
 
 on boot
     chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
@@ -128,6 +130,10 @@ on late-fs
 
     # Mount RW partitions which need run fsck
     mount_all /system/vendor/etc/fstab.qcom --late
+
+on post-fs
+    # Start devices by sysfs trigger
+    start devstart_sh
 
 on post-fs-data
     mkdir /persist/data/sfs 0700 system system
@@ -339,3 +345,10 @@ service charger /charger
     class charger
     group system graphics
     seclabel u:r:charger:s0
+
+service devstart_sh /system/vendor/bin/init.qcom.devstart.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot

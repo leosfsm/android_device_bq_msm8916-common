@@ -22,3 +22,10 @@
 /sys/devices/virtual/input/input.*/acc_offset_x             u:object_r:sysfs_g_sensor:s0
 /sys/devices/virtual/input/input.*/acc_offset_y             u:object_r:sysfs_g_sensor:s0
 /sys/devices/virtual/input/input.*/acc_offset_z             u:object_r:sysfs_g_sensor:s0
+
+#/system binaries
+/(vendor|system/vendor)/bin/init\.qcom\.devstart\.sh            u:object_r:init-qcom-devstart-sh_exec:s0
+/(vendor|system/vendor)/bin/init\.qcom\.devwait\.sh             u:object_r:init-qcom-devwait-sh_exec:s0
+
+# Sysfs entry for audio
+/sys/kernel/boot_adsp/boot         u:object_r:sysfs_audio:s0

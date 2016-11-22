@@ -216,6 +216,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.qcom.devstart.sh \
+    init.qcom.devwait.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     ueventd.qcom.rc
