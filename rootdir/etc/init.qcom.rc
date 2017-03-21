@@ -124,11 +124,16 @@ on boot
 
 on late-fs
     # Start bootanim and its dependencies
-    start hwservicemanager
     start servicemanager
     start surfaceflinger
     start bootanim
-    # mount RW partitions which need run fsck
+
+    # Make sure HW service manager started and start required HAL services
+    wait_for_prop hwservicemanager.ready true
+    start configstore-hal-1-0
+    start gralloc-2-0
+
+    # Mount RW partitions which need run fsck
     mount_all /system/vendor/etc/fstab.qcom --late
 
 on post-fs-data
