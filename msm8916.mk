@@ -56,15 +56,15 @@ PRODUCT_COPY_FILES += \
     hardware/qcom/audio-caf/msm8916/configs/msm8916_32/audio_policy.conf:system/etc/audio_policy.conf
 
 # Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl \
-
-# Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    libbt-vendor
 
 # Camera
 PRODUCT_PACKAGES += \
