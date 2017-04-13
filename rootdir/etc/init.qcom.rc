@@ -124,7 +124,6 @@ on boot
 
 on late-fs
     # Start bootanim and its dependencies
-    start servicemanager
     start surfaceflinger
     start bootanim
     start configstore-hal-1-0
