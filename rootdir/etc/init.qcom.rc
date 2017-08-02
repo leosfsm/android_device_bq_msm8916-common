@@ -222,6 +222,7 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
     group system wakelock
+    shutdown critical
 
 service config_bt_addr /system/bin/btnvtool -O
     class core
