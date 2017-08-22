@@ -257,8 +257,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     libcurl \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
     wcnss_service
     
 PRODUCT_COPY_FILES += \
