@@ -144,7 +144,8 @@ BOARD_SEPOLICY_DIRS += device/bq/msm8916-common/sepolicy
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib/libcamera_client.so|libcamera_parameters_shim.so \
-    /system/vendor/lib/libizat_core.so|libshims_get_process_name.so
+    /system/vendor/lib/libizat_core.so|libshims_get_process_name.so \
+    /system/vendor/lib/libflp.so|libshims_flp.so
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
