@@ -133,7 +133,7 @@ TARGET_SYSTEM_PROP := device/bq/msm8916-common/system.prop
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/bq/msm8916-common/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/bq/msm8916-common/rootdir/etc/fstab.recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SUPPRESS_EMMC_WIPE := true
