@@ -235,7 +235,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
+    android.hardware.vibrator@1.0-service.bq_8916
+
 # Wifi
 PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
