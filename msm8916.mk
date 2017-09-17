@@ -236,6 +236,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Usb
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.bq_8916
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service.bq_8916
