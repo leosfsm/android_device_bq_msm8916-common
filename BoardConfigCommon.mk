@@ -114,7 +114,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/bq/msm8916-common/include
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 
 # Init
+TARGET_INIT_VENDOR_LIB := libinit_msm8916
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8916
 
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
