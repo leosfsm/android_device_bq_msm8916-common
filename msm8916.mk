@@ -59,9 +59,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1
 
 PRODUCT_PACKAGES += \
-    init.qcom.bt.sh
-
-PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     libbt-vendor
 
