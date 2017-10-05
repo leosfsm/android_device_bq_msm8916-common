@@ -43,6 +43,11 @@ namespace implementation {
 static void set(std::string path, std::string value) {
     std::ofstream file(path);
 
+    if (!file.is_open()) {
+        ALOGE("failed to write %s to %s", value.c_str(), path.c_str());
+        return;
+    }
+
     file << value;
 }
 
@@ -54,6 +59,11 @@ static void set_blink(std::string path, int value, int on, int off) {
     std::ofstream file(path);
     char buffer[40];
     snprintf(buffer, sizeof(buffer), "%d %d %d\n", value, on, off);
+
+    if (!file.is_open()) {
+        ALOGE("failed to write %d to %s", value, path.c_str());
+        return;
+    }
 
     file << buffer;
 }
