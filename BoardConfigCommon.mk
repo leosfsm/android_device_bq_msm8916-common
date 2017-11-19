@@ -155,9 +155,6 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libizat_core.so|libshims_get_process_name.so \
     /system/vendor/lib/libflp.so|libshims_flp.so
 
-# Time services
-BOARD_USES_QC_TIME_SERVICES := true
-
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
