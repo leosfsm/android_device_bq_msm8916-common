@@ -237,7 +237,7 @@ on property:bluetooth.hciattach=false
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc qcom_diag wakelock
+    group radio audio bluetooth gps nfc oem_2950 wakelock
 
 service netmgrd /system/bin/netmgrd
     class main
