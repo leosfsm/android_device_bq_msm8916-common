@@ -1,4 +1,4 @@
-# CMHW
+# Lineagehw
 type touchpanel_sysfs, fs_type, sysfs_type;
 type vibeamp_sysfs, fs_type, sysfs_type;
 

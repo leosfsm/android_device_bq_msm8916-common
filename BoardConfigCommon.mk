@@ -64,9 +64,6 @@ FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# CMHW
-BOARD_HARDWARE_CLASS += device/bq/msm8916-common/cmhw/src
-
 # Add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _32
 
@@ -121,6 +118,9 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# Lineagehw
+BOARD_HARDWARE_CLASS += device/bq/msm8916-common/lineagehw/src
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
