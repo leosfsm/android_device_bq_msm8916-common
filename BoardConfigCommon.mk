@@ -147,6 +147,9 @@ BOARD_SEPOLICY_DIRS += device/bq/msm8916-common/sepolicy
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
+# Vendor Interface Manifest
+DEVICE_MANIFEST_FILE := device/bq/msm8916-common/manifest.xml
+
 # Widevine
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
