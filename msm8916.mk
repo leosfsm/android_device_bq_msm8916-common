@@ -44,8 +44,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml \
-    hardware/qcom/audio-caf/msm8916/configs/msm8916_32/audio_effects.conf:system/vendor/etc/audio_effects.conf \
-    hardware/qcom/audio-caf/msm8916/configs/msm8916_32/audio_policy.conf:system/etc/audio_policy.conf
+    hardware/qcom/audio-caf/msm8916/configs/msm8916_32/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
