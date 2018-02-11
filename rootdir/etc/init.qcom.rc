@@ -87,7 +87,7 @@ on boot
     mkdir /dev/socket/netmgr 0750 radio radio
 
     # Remove SUID bit for iproute2 ip tool
-    chmod 0755 /system/bin/ip
+    chmod 0755 /system/vendor/bin/ip
 
     # Prevents permission denied error for telephony
     chmod 0644 /proc/cmdline
@@ -212,12 +212,12 @@ on property:hw.fm.init=1
 on property:hw.fm.init=0
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
 
-service irsc_util /system/bin/irsc_util "/system/vendor/etc/sec_config"
+service irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
     class main
     user root
     oneshot
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
     group root system wakelock
@@ -238,17 +238,17 @@ on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /system/bin/qmuxd
+service qmuxd /system/vendor/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps nfc oem_2950 wakelock
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
     user root
     group root wifi wakelock radio inet system
 
-service sensord /system/bin/sensord
+service sensord /system/vendor/bin/sensord
     class main
     user root
     group system
@@ -272,7 +272,7 @@ service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
+service hostapd /system/vendor/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
     user root
     group root
@@ -285,12 +285,12 @@ service ril-daemon2 /system/vendor/bin/hw/rild -c 2
     group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
-service qcamerasvr /system/bin/mm-qcamera-daemon
+service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
 
-service qseecomd /system/bin/qseecomd
+service qseecomd /system/vendor/bin/qseecomd
     class core
     user root
     group root
@@ -310,12 +310,12 @@ service thermal-engine /system/vendor/bin/thermal-engine
    socket thermal-send-rule stream 0660 system system
    group root
 
-service time_daemon /system/bin/time_daemon
+service time_daemon /system/vendor/bin/time_daemon
    class late_start
    user root
    group root
 
-service ppd /system/bin/mm-pp-daemon
+service ppd /system/vendor/bin/mm-pp-daemon
     class late_start
     disabled
     user system
@@ -328,7 +328,7 @@ on property:init.svc.surfaceflinger=stopped
 on property:init.svc.surfaceflinger=running
     start ppd
 
-service wcnss-service /system/bin/wcnss_service
+service wcnss-service /system/vendor/bin/wcnss_service
     class main
     user system
     group system wifi radio
