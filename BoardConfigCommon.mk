@@ -145,6 +145,9 @@ TARGET_RIL_VARIANT := caf
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/bq/msm8916-common/sepolicy
 
+# Shims
+TARGET_LD_SHIM_LIBS := /system/lib/libcamera_client.so|libcamera_parameters_shim.so
+
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
