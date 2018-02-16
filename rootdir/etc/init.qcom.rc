@@ -224,8 +224,9 @@ service irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
 service rmt_storage /system/vendor/bin/rmt_storage
     class core
     user root
-    group system wakelock
+    group root system wakelock
     shutdown critical
+    writepid /dev/cpuset/system-background/tasks
 
 service config_bt_addr /system/vendor/bin/btnvtool -O
     class core
