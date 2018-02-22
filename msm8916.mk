@@ -232,7 +232,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 # Wifi
 PRODUCT_PACKAGES += \
-    hostapd_default.conf \
     p2p_supplicant_overlay.conf \
     wpa_supplicant_overlay.conf \
     WCNSS_cfg.dat \
