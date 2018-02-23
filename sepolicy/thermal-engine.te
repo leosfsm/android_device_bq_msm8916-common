@@ -1,0 +1,2 @@
+allow thermal-engine sysfs_spmi_dev:dir { read search open };
+allow thermal-engine sysfs_spmi_dev:lnk_file read;
