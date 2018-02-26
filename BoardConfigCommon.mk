@@ -15,6 +15,8 @@
 # limitations under the License.
 #
 
+COMMON_PATH := device/bq/msm8916-common
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8916
 TARGET_NO_BOOTLOADER := true
@@ -83,7 +85,7 @@ BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # For config.fs
-TARGET_FS_CONFIG_GEN := device/bq/msm8916-common/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Graphics
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
@@ -119,19 +121,19 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineagehw
-BOARD_HARDWARE_CLASS += device/bq/msm8916-common/lineagehw/src
+BOARD_HARDWARE_CLASS += $(COMMON_PATH)/lineagehw/src
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
 
 # Properties
-TARGET_SYSTEM_PROP := device/bq/msm8916-common/system.prop
+TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/bq/msm8916-common/rootdir/etc/fstab.recovery
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SUPPRESS_EMMC_WIPE := true
@@ -142,7 +144,7 @@ TARGET_RIL_VARIANT := caf
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 include device/qcom/sepolicy/legacy-sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/bq/msm8916-common/sepolicy
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := /system/lib/libcamera_client.so|libcamera_parameters_shim.so
@@ -151,8 +153,8 @@ TARGET_LD_SHIM_LIBS := /system/lib/libcamera_client.so|libcamera_parameters_shim
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Vendor Interface Manifest
-DEVICE_MANIFEST_FILE := device/bq/msm8916-common/manifest.xml
-DEVICE_MATRIX_FILE := device/bq/msm8916-common/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Widevine
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
