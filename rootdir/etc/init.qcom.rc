@@ -69,6 +69,7 @@ on early-boot
 
     write /sys/kernel/boot_adsp/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
+    symlink /vendor/etc/acdbdata /system/etc/acdbdata
 
 on boot
     chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
