@@ -126,10 +126,10 @@ PRODUCT_PACKAGES += \
     gps.msm8916
     
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf
+    $(LOCAL_PATH)/gps/etc/flp.conf:system/vendor/etc/flp.conf \
+    $(LOCAL_PATH)/gps/etc/gps.conf:system/vendor/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/izat.conf:system/vendor/etc/izat.conf \
+    $(LOCAL_PATH)/gps/etc/sap.conf:system/vendor/etc/sap.conf
 
 # IRSC
 PRODUCT_COPY_FILES += \
