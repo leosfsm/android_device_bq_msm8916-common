@@ -31,7 +31,7 @@ LOCAL_MODULE       := WCNSS_cfg.dat
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/firmware/wlan/prima
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/firmware/wlan/prima
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -39,7 +39,7 @@ LOCAL_MODULE       := WCNSS_qcom_wlan_nv.bin
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/firmware/wlan/prima
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/firmware/wlan/prima
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -47,7 +47,7 @@ LOCAL_MODULE       := WCNSS_wlan_dictionary.dat
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/firmware/wlan/prima
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)/firmware/wlan/prima
 include $(BUILD_PREBUILT)
 
 endif
