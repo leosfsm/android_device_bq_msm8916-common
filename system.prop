@@ -3,20 +3,20 @@
 dalvik.vm.dex2oat-flags=--no-watch-dog
 
 # Audio
-ro.qc.sdk.audio.ssr=false
-ro.qc.sdk.audio.fluencetype=fluence
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
-tunnel.audio.encode=false
-audio.offload.buffer.size.kb=64
-audio.offload.min.duration.secs=30
-audio.offload.gapless.enabled=true
 audio.offload.video=true
 audio.deep_buffer.media=true
-use.voice.path.for.pcm.voip=true
-ro.fm.transmitter=false
+audio.offload.min.duration.secs=30
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.speaker=true
 persist.sys.fm=qn8035
+ro.vendor.audio.sdk.ssr=false
+ro.vendor.audio.sdk.fluencetype=fluence
+ro.fm.transmitter=false
+vendor.audio.tunnel.encode=false
+vendor.audio.offload.buffer.size.kb=64
+vendor.audio.offload.gapless.enabled=true
+vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
 qcom.bluetooth.soc=smd
