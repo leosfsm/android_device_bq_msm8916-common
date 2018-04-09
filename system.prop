@@ -92,6 +92,7 @@ media.aac_51_output_enabled=true
 media.stagefright.use-awesome=false
 vidc.enc.narrow.searchrange=1
 drm.service.enabled=true
+persist.media.treble_omx=false
 
 # min/max cpu in core control
 ro.core_ctl_min_cpu=2
