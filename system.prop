@@ -98,7 +98,7 @@ persist.media.treble_omx=false
 ro.config.max_starting_bg=8
 
 # Telephony
-rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ril.subscription.types=NV,RUIM
 persist.data.netmgrd.qos.enable=true
