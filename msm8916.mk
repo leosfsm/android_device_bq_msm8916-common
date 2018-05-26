@@ -238,6 +238,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.1-service.bq_8916
 
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk_package
+
 # Wifi
 PRODUCT_PACKAGES += \
     p2p_supplicant_overlay.conf \
