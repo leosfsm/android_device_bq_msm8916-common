@@ -22,7 +22,6 @@ LOCAL_SRC_FILES := CameraParameters.cpp
 LOCAL_MODULE := libcamera_parameters_shim
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_TAGS := optional
-LOCAL_32_BIT_ONLY := true
 LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
