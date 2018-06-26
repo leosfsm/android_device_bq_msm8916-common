@@ -23,6 +23,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -208,11 +211,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     power.msm8916
-
-# Qualcomm
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true \
-    ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
 
 # Ramdisk
 PRODUCT_PACKAGES += \
