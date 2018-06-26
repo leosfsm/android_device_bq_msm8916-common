@@ -20,6 +20,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -204,13 +207,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     power.msm8916
-
-# Qualcomm
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true \
-    ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so \
-    ro.core_ctl_min_cpu=2 \
-    ro.core_ctl_max_cpu=4
 
 # Ramdisk
 PRODUCT_PACKAGES += \

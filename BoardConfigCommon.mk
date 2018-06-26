@@ -120,7 +120,7 @@ BOARD_HARDWARE_CLASS += device/bq/msm8916-common/lineagehw/src
 TARGET_POWERHAL_VARIANT := qcom
 
 # Properties
-TARGET_SYSTEM_PROP := device/bq/msm8916-common/system.prop
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
