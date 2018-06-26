@@ -152,6 +152,9 @@ TARGET_LD_SHIM_LIBS := \
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := device/bq/msm8916-common/manifest.xml
 DEVICE_MATRIX_FILE := device/bq/msm8916-common/compatibility_matrix.xml
