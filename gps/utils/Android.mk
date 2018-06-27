@@ -55,6 +55,7 @@ LOCAL_COPY_HEADERS:= \
    platform_lib_abstractions/platform_lib_macros.h \
    loc_misc_utils.h
 
+LOCAL_HEADER_LIBRARIES += libhardware_headers
 LOCAL_MODULE := libgps.utils
 LOCAL_MODULE_OWNER := qcom
 LOCAL_PROPRIETARY_MODULE := true

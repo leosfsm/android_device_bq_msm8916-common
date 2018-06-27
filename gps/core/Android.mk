@@ -43,4 +43,6 @@ LOCAL_COPY_HEADERS:= \
     loc_core_log.h \
     LocAdapterProxyBase.h
 
+LOCAL_HEADER_LIBRARIES += libhardware_headers
+
 include $(BUILD_SHARED_LIBRARY)

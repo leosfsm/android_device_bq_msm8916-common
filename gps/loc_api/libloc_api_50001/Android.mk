@@ -53,6 +53,8 @@ LOCAL_COPY_HEADERS:= \
    loc_eng_msg.h \
    loc_eng_log.h
 
+LOCAL_HEADER_LIBRARIES += libhardware_headers
+
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -92,5 +94,6 @@ LOCAL_C_INCLUDES:= \
     $(TARGET_OUT_HEADERS)/libflp
 
 LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_HEADER_LIBRARIES += libhardware_headers
 
 include $(BUILD_SHARED_LIBRARY)
