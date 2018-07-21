@@ -56,10 +56,7 @@ on boot
     chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
 
-    # Enable writing to led blink node from userspace
-    chown system system /sys/class/leds/red/blink
-    chown system system /sys/class/leds/green/blink
-    chown system system /sys/class/leds/blue/blink
+    # Enable writing to led nodes from userspace
     chown system system /sys/class/leds/flashlight/brightness
     chown system system /sys/class/leds/flashlight-front/brightness
     chown system camera /sys/class/leds/torch-light0/brightness

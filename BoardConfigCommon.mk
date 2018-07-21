@@ -113,9 +113,6 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Keymaster
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Lineagehw
 BOARD_HARDWARE_CLASS += device/bq/msm8916-common/lineagehw/src
 
