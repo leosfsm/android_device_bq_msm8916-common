@@ -16,6 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.fm.transmitter=false \
     vendor.audio.tunnel.encode=false \
+    vendor.audio.av.streaming.offload.enable=true \
     vendor.audio.offload.buffer.size.kb=64 \
     vendor.audio.offload.gapless.enabled=true \
     vendor.voice.path.for.pcm.voip=true
@@ -100,7 +101,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.msm8929hw=0 \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true \
-    media.aac_51_output_enabled=true \
     media.stagefright.use-awesome=false \
     vidc.enc.narrow.searchrange=1 \
     drm.service.enabled=true \
@@ -153,7 +153,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.usb.default.config=diag,serial_smd,serial_tty,mass_storage,adb
-
-# WiFi
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.disableWifiApFirmwareReload=true
