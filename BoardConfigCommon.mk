@@ -124,7 +124,7 @@ BOARD_HARDWARE_CLASS += device/bq/msm8916-common/lineagehw/src
 
 # Power
 TARGET_HAS_NO_POWER_STATS := true
-TARGET_HAS_NO_WIFI_STATS := true
+TARGET_HAS_NO_WLAN_STATS := true
 TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
