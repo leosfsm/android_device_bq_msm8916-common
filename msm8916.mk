@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
     libcamera_parameters_shim \
     Snap
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+
 # Connectivity
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
